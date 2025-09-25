@@ -26,29 +26,31 @@ class MyTextWidget extends StatelessWidget {
     );
   }
 }
+```
 Perubahan pada main.dart
 
 Saya mengimpor file text_widget.dart ke dalam main.dart:
-import 'basic_widgets/text_widget.dart';
+```import 'basic_widgets/text_widget.dart';```
 
 Kemudian pada bagian widget Column, teks bawaan diganti menjadi widget baru:
-children: <Widget>[
+```children: <Widget>[
   const MyTextWidget(), // teks custom
   Text(
     '$_counter',
     style: Theme.of(context).textTheme.headlineMedium,
   ),
-],
+],```
 
 Hasil
 
 Setelah dijalankan, aplikasi menampilkan teks
 "Nama saya Muhammad Mahdi Arielreza Hafiz, sedang belajar Pemrograman Mobile" berwarna merah di atas counter.
+
 ![Screenshot hello_world](images/02.png)
 
 Langkah 2: Image Widget
 
-Saya menambahkan file baru image_widget.dart di dalam folder basic_widgets dengan isi:import 'package:flutter/material.dart';
+Saya menambahkan file baru image_widget.dart di dalam folder basic_widgets dengan isi:```import 'package:flutter/material.dart';
 
 class MyImageWidget extends StatelessWidget {
   const MyImageWidget({Key? key}) : super(key: key);
@@ -60,26 +62,26 @@ class MyImageWidget extends StatelessWidget {
     );
   }
 }
-
+```
 Perubahan pada pubspec.yaml
 
-Menambahkan konfigurasi asset agar Flutter bisa memuat gambar:flutter:
+Menambahkan konfigurasi asset agar Flutter bisa memuat gambar:```flutter:
   assets:
     - assets/polinema_logo.png
   uses-material-design: true
-
+```
 Perubahan pada main.dart
 
-Saya mengimpor file image_widget.dart ke dalam main.dart:import 'package:hello_world/basic_widgets/image_widget.dart';
+Saya mengimpor file image_widget.dart ke dalam main.dart:```import 'package:hello_world/basic_widgets/image_widget.dart'; ```
 
-Kemudian pada bagian widget Column, saya menambahkan widget gambar di atas counter:children: <Widget>[
+Kemudian pada bagian widget Column, saya menambahkan widget gambar di atas counter:```children: <Widget>[
   const MyImageWidget(), // menampilkan logo Polinema
   Text(
     '$_counter',
     style: Theme.of(context).textTheme.headlineMedium,
   ),
 ],
-
+```
 Hasil
 
 Setelah dijalankan, aplikasi menampilkan logo Polinema di atas counter angka.

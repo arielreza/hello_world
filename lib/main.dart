@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/basic_widgets/image_widget.dart';
 import 'basic_widgets/text_widget.dart'; // Import custom widget
 
 void main() {
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             // 👉 ganti teks default dengan MyTextWidget
-            const MyTextWidget(),
+            const MyImageWidget(),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
